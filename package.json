@@ -1,0 +1,13 @@
+{
+  "name": "server-component",
+  "license": "BSD-3-Clause",
+  "scripts": {
+    "start": "xvfb run electron node_modules/scram-engine/main.js --entry-file bower_components/server-component/index.html",
+    "dev": "electron node_modules/scram-engine/main.js --entry-file bower_components/server-component/index.html",
+    "dev-window": "electron node_modules/scram-engine/main.js --entry-file bower_components/server-component/index.html --window",
+    "dev-file": "electron node_modules/scram-engine/main.js --entry-file bower_components/server-component/index.html --file-system --window"
+  },
+  "dependencies": {
+    "electron-prebuilt": "latest"
+  }
+}
