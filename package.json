@@ -10,7 +10,7 @@
   "dependencies": {
     "express": "latest",
     "morgan": "latest",
-    "electron-prebuilt": "latest"
+    "electron-prebuilt": "latest",
     "body-parser": "latest",
     "scram-engine": "latest"
   }
