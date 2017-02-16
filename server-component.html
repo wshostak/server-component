@@ -1,0 +1,25 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<link rel="import" href="../express-web-components/express-app.html">
+<link rel="import" href="../express-web-components/express-middleware.html">
+<link rel="import" href="../express-web-components/express-config.html">
+
+<dom-module id="server-component">
+    <template>
+        <express-app port="3000">
+            <express-config callback="[[paramCallback]]"></express-config>
+            <express-app-param name="collectionName" callback="[[paramCallback]]"></express-app-param>
+            <express-middleware callback="[[bodyParserMW]]"></express-middleware>
+            <express-middleware callback="[[bodyParserURLEncodedMW]]"></express-middleware>
+            <express-middleware callback="[[loggerMW]]"></express-middleware>
+            <express-middleware method="get" path="/" callback="[[getIndex]]"></express-middleware>
+            <express-middleware method="get" path="/collections/:collectionName" callback="[[getCollection]]"></express-middleware>
+            <express-middleware method="post" path="/collections/:collectionName" callback="[[postCollection]]"></express-middleware>
+            <express-middleware method="get" path="/collections/:collectionName/:id" callback="[[getCollectionEntity]]"></express-middleware>
+            <express-middleware method="put" path="/collections/:collectionName/:id" callback="[[putCollectionEntity]]"></express-middleware>
+            <express-middleware method="delete" path="/collections/:collectionName/:id" callback="[[deleteCollectionEntity]]"></express-middleware>
+        </express-app>
+    </template>
+
+    <script src="server-component.js"></script>
+</dom-module>
