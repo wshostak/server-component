@@ -8,6 +8,10 @@
     "dev-file": "electron node_modules/scram-engine/main.js --entry-file bower_components/server-component/index.html --file-system --window"
   },
   "dependencies": {
+    "express": "latest",
+    "morgan": "latest",
     "electron-prebuilt": "latest"
+    "body-parser": "latest",
+    "scram-engine": "latest"
   }
 }
