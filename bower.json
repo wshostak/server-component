@@ -3,7 +3,7 @@
   "description": "Server side components",
   "main": "server-component.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.4.0"
+    "polymer": "Polymer/polymer#^1.4.0",
     "body-parser": "^1.16.1",
     "electron-prebuilt": "^1.4.13",
     "express": "^4.14.1",
